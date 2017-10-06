@@ -53,3 +53,20 @@ def mode (list)
 	end
 	return times
 end
+
+def longest_run (list)
+	length = 1
+	holder = 0
+	list.each do |number|
+		if holder == 0
+			holder = number
+		end
+		if number == (holder + 1)
+			length += 1
+		else
+			holder = number
+		end
+	end
+	return length
+end
+
